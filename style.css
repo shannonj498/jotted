@@ -1,0 +1,217 @@
+body {
+  margin: 0 auto;
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: Transparent;
+  outline: none;
+}
+
+/* Start navbar */
+
+nav {
+  background-color: #182756;
+  margin: 0 auto;
+  padding: .5rem 0;
+  z-index: 1;
+  width: 100%;
+}
+
+#icon-nav a {
+  color: white;
+}
+
+#logo {
+  display: inline-block;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 5rem;
+  margin-top: 2rem;
+}
+
+#add-note-button {
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+#triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 280px solid transparent;
+	border-bottom: 210px solid #F1F1F1;
+  transform: rotate(-42deg);
+  margin-top: -14rem;
+  margin-left: -9rem;
+}
+
+
+#logo p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #474747;
+}
+
+#icon-nav {
+  margin: 0;
+  display: inline-block;
+  margin-left: 6rem;
+}
+
+.fa {
+  margin: 0;
+  padding: 0 2rem;
+}
+
+.fa-plus {
+  color: #8EA495;
+  font-size: 5rem;
+}
+
+.add-wrap {
+  position: relative;
+  margin-left: 1rem;
+  margin-top: -7rem;
+}
+
+.description {
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-left: 2.1rem;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0.7rem;
+  transition: opacity .5s, visibility .5s;
+  cursor: pointer;
+}
+
+
+.add-wrap:hover .description {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Start notes */
+
+.note-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin: 8.5rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #F4FAF6;
+  border-radius: 10px;
+  box-shadow: 15px 15px 30px #D5D5D5;
+  visibility: hidden;
+}
+
+.new-note {
+  margin: 0.7rem;
+  word-wrap: break-word;
+  margin-bottom: 2rem;
+}
+
+.editable {
+  background-color: white;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4px;
+  border: none;
+  position: relative;
+  box-shadow: 10px 10px 30px #C8C8C8;
+  transition: box-shadow .4s;
+  position: relative;
+  padding: 1rem;
+  font-size: 0.9rem;
+  outline: none;
+  animation: zoomin 0.8s;
+}
+
+@keyframes zoomin {
+  0% {
+    border-radius: 100%;
+  }
+}
+
+.red {
+  background-color: #FFEBEB;
+}
+
+.new-note:hover .editable {
+  box-shadow: 2px 2px 8px #B6B6B6;
+}
+
+.new-note p {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+/* Toolbar */
+.toolbar {
+  position: absolute;
+  background-color: #BFBFBF;
+  margin-top: -0.25rem;
+  padding-top: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 2px;
+  width: 10rem;
+  box-shadow: 2px 2px 8px #B6B6B6;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underscore {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.fa-trash, .fa-bold, .fa-italic, .fa-underline, .fa-exclamation {
+  margin: 0;
+  padding: 0;
+  padding: 0.2rem;
+  color: white;
+  margin-bottom: 0.2rem;
+  font-size: 13px;
+}
+
+.fa-trash:hover, .fa-bold:hover, .fa-italic:hover, .fa-underline:hover, .fa-exclamation:hover {
+  color: white;
+}
+
+.new-note:hover .toolbar{
+  visibility: visible;
+  opacity: 1;
+}
